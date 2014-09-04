@@ -4,10 +4,10 @@
     </div>
 </div>
 
-<div class="row">
-    <?php foreach ($teams as $team): ?>
+<div class="row" ng-controller="AdminCtrl">
+    <div ng-repeat="team in teams"
         <div class="col-xs-6 well">
-            <h3><?= $team['Team']['name'] ?></h3><h5>Score : <?= $team['Team']['points'] ?></h5><a href='.' class="btn btn-success">+</a> <a href='.' class="btn btn-danger">-</a>
+            <h3>{{ team.Team.name }}</h3><h5>Score : <span ng-model=""></span>{{ team.Team.points }}</h5><button class="btn btn-success" ng-click="managePoints(1, 'a')">+</button> <button class="btn btn-danger" ng-click="managePoints(1, 'r')">-</button>
         </div>
-    <?php endforeach ?>
+    </div>
 </div>

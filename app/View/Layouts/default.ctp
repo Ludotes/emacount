@@ -33,13 +33,35 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <body>
-	<div class="container">
+	<div class="container" ng-app="EmacountApp", ng-controller="TeamsCtrl">
                 	<?php echo $this->Session->flash(); ?>
                 	<?php echo $this->fetch('content'); ?>
 	</div>
 <!-- Scripts -->
-<?php echo $this->Html->script('components/jquery.min'); ?>
-<?php echo $this->Html->script('components/angular.min'); ?>
-<?php echo $this->Html->script('components/bootstrap.min'); ?>
+    <!-- Script de récupération d'url -->
+    <script type="text/javascript">
+        var urlGetTeamsJSON = "<?= $this->Html->url(array(
+            "controller" => "teams",
+            "action" => "getTeamsJSON")); ?>";
+
+        var urlManagePoints = "<?= $this->Html->url(array(
+            "controller" => "teams",
+            "action" => "managePoint")); ?>";
+
+    </script>
+    <!-- Components -->
+    <?php echo $this->Html->script('components/jquery.min'); ?>
+    <?php echo $this->Html->script('components/angular.min'); ?>
+    <?php echo $this->Html->script('components/angular-timer.min'); ?>
+    <?php echo $this->Html->script('components/bootstrap.min'); ?>
+    <!-- App -->
+    <?php echo $this->Html->script('app'); ?>
+    <!-- Controllers -->
+    <?php echo $this->Html->script('controllers/teams_ctrl'); ?>
+     <?php echo $this->Html->script('controllers/admin_ctrl'); ?>
+     <?php echo $this->Html->script('controllers/display_ctrl'); ?>
+    <!-- Factories -->
+    <?php echo $this->Html->script('factories/teams_factory'); ?>
+    <?php echo $this->Html->script('factories/admin_factory'); ?>
 </body>
 </html>

@@ -120,20 +120,33 @@ class TeamsController extends AppController {
 
 /**
  * Méthode d'ajout d'un point à une équipe
+ * action : "a" pour ajouter, "r" pour retirer
+ * Elle sera appellée en AJAX
  */
-	public function managePoint($id = null, $action){
+	public function managePoint($id = null, $a){
+		$this->autoRender = false;
 		$this->Team->id = $id;
 		if(!$this->Team->exists()){
 			throw new NotFoundException(__('Invalid team'));
 		}
 		$team = $this->Team->findById($id);
-		if($action == "a"){
+		if($a == "a"){
 			$team['Team']['points']++;
-		}elseif($action == "r"){
+		}elseif($a == "r"){
 			$team['Team']['points']--;
 		}else{
 			throw new NotFoundException(__('Invalid action'));
 		}
 		$this->Team->save($team);
+	}
+/**
+ * Méthode qui récupère les données des Teams et qui les encode en JSON
+ * Idéale pour appel AJAX
+ */
+	public function getTeamsJSON(){
+		$this->autoRender = false;
+		$this->response->type('json');
+		$json = json_encode($this->Team->find('all'));
+		$this->response->body($json);
 	}
 }
