@@ -10,8 +10,8 @@ EmacountApp.factory('AdminFactory', ['$http', '$q', function($http, $q){
             var url = urlManagePoints+'/'+id+'/'+action;
             console.log(urlManagePoints);
             $http({method: 'GET', url: url})
-                .success(function(){
-                    deferred.resolve('Action effectuée');
+                .success(function(data){
+                    deferred.resolve(data);
                 }).error(function(){
                     deferred.reject('Erreur dans le management des points par AJAX');
                 });

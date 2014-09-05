@@ -138,6 +138,10 @@ class TeamsController extends AppController {
 			throw new NotFoundException(__('Invalid action'));
 		}
 		$this->Team->save($team);
+
+		$this->response->type('json');
+		$json = json_encode($this->Team->find('all'));
+		$this->response->body($json);
 	}
 /**
  * Méthode qui récupère les données des Teams et qui les encode en JSON

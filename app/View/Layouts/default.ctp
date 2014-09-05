@@ -33,7 +33,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <body>
-	<div class="container" ng-app="EmacountApp", ng-controller="TeamsCtrl">
+	<div class="container" ng-app="EmacountApp">
                 	<?php echo $this->Session->flash(); ?>
                 	<?php echo $this->fetch('content'); ?>
 	</div>
@@ -57,7 +57,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <!-- App -->
     <?php echo $this->Html->script('app'); ?>
     <!-- Controllers -->
-    <?php echo $this->Html->script('controllers/teams_ctrl'); ?>
      <?php echo $this->Html->script('controllers/admin_ctrl'); ?>
      <?php echo $this->Html->script('controllers/display_ctrl'); ?>
     <!-- Factories -->

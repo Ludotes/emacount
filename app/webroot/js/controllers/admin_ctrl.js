@@ -4,10 +4,22 @@
  */
 var EmacountApp;
 
-EmacountApp.controller('AdminCtrl', ['$scope','AdminFactory', function($scope,AdminFactory){
-    $scope.managePoints = function(id, action){
-        AdminFactory.managePoints(id, action).then(function(msg){
+EmacountApp.controller('AdminCtrl', ['$scope','AdminFactory','TeamsFactory', function($scope,AdminFactory,TeamsFactory){
+    /* Récupération des données des teams */
+    var getTeams = function(){
+        TeamsFactory.getTeams().then(function(teams){
+            $scope.teams = teams;
+            console.log($scope.teams);
+        }, function(msg){
             console.log(msg);
+        });
+    };
+    getTeams();
+
+    /* Mise en place de la fonction de gestion des points */
+    $scope.managePoints = function(id, action){
+        AdminFactory.managePoints(id, action).then(function(data){
+            $scope.teams = data;
         }, function(msg){
             console.log(msg);
         });
