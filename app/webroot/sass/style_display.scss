@@ -1,0 +1,30 @@
+/* Imports */
+@import "compass/css3/transition";
+
+/* Colors */
+$hell-color-dark: #9c0001;
+$hell-color-bright: #f50000;
+$heaven-color-dark: #b2eae7;
+$heaven-color-bright: #edf9f7;
+
+.bite {
+    position:relative;
+    z-index:9;
+}
+
+.footer{
+    height: 400px;
+    margin-right: 0px;
+}
+
+.hell.background-display{
+    background-color: $hell-color-bright;
+}
+.heaven.background-display{
+    background-color: $heaven-color-bright;
+}
+
+.background-display{
+    @include transition-property(background-color);
+    @include transition-duration(2s);
+}

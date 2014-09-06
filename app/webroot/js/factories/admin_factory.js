@@ -5,9 +5,9 @@ var urlManagePoints;
 
 EmacountApp.factory('AdminFactory', ['$http', '$q', function($http, $q){
     var factory = {
-        managePoints : function(id, action){
+        managePoints : function(id, action, points){
             var deferred = $q.defer();
-            var url = urlManagePoints+'/'+id+'/'+action;
+            var url = urlManagePoints+'/'+id+'/'+action+'/'+points;
             console.log(urlManagePoints);
             $http({method: 'GET', url: url})
                 .success(function(data){

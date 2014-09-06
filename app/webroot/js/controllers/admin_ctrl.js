@@ -17,8 +17,8 @@ EmacountApp.controller('AdminCtrl', ['$scope','AdminFactory','TeamsFactory', fun
     getTeams();
 
     /* Mise en place de la fonction de gestion des points */
-    $scope.managePoints = function(id, action){
-        AdminFactory.managePoints(id, action).then(function(data){
+    $scope.managePoints = function(id, action, points){
+        AdminFactory.managePoints(id, action, points).then(function(data){
             $scope.teams = data;
         }, function(msg){
             console.log(msg);

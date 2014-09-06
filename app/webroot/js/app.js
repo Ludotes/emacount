@@ -4,4 +4,4 @@
 *
 * Description
 */
-var EmacountApp = angular.module('EmacountApp', ['timer']);
+var EmacountApp = angular.module('EmacountApp', ['timer','highcharts-ng']);

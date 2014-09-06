@@ -32,11 +32,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('script');
 	?>
 </head>
-<body>
-	<div class="container" ng-app="EmacountApp">
-                	<?php echo $this->Session->flash(); ?>
-                	<?php echo $this->fetch('content'); ?>
-	</div>
+<body ng-app="EmacountApp">
+        	<?php echo $this->Session->flash(); ?>
+        	<?php echo $this->fetch('content'); ?>
+
 <!-- Scripts -->
     <!-- Script de récupération d'url -->
     <script type="text/javascript">
@@ -54,6 +53,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <?php echo $this->Html->script('components/angular.min'); ?>
     <?php echo $this->Html->script('components/angular-timer.min'); ?>
     <?php echo $this->Html->script('components/bootstrap.min'); ?>
+    <?php echo $this->Html->script('components/highcharts'); ?>
+    <?php echo $this->Html->script('components/highcharts-ng.min'); ?>
     <!-- App -->
     <?php echo $this->Html->script('app'); ?>
     <!-- Controllers -->

@@ -122,8 +122,11 @@ class TeamsController extends AppController {
  * Méthode d'ajout d'un point à une équipe
  * action : "a" pour ajouter, "r" pour retirer
  * Elle sera appellée en AJAX
+ * $id : id
+ * $a : action
+ * $p : nombre de point à retirer/ajouter
  */
-	public function managePoint($id = null, $a){
+	public function managePoint($id = null, $a, $p){
 		$this->autoRender = false;
 		$this->Team->id = $id;
 		if(!$this->Team->exists()){
@@ -131,9 +134,9 @@ class TeamsController extends AppController {
 		}
 		$team = $this->Team->findById($id);
 		if($a == "a"){
-			$team['Team']['points']++;
+			$team['Team']['points'] = $team['Team']['points']+$p;
 		}elseif($a == "r"){
-			$team['Team']['points']--;
+			$team['Team']['points'] = $team['Team']['points']-$p;
 		}else{
 			throw new NotFoundException(__('Invalid action'));
 		}

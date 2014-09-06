@@ -1,0 +1,33 @@
+/* Imports */
+/* Colors */
+/* line 10, ../sass/style_display.scss */
+.bite {
+  position: relative;
+  z-index: 9;
+}
+
+/* line 15, ../sass/style_display.scss */
+.footer {
+  height: 400px;
+  margin-right: 0px;
+}
+
+/* line 20, ../sass/style_display.scss */
+.hell.background-display {
+  background-color: #f50000;
+}
+
+/* line 23, ../sass/style_display.scss */
+.heaven.background-display {
+  background-color: #edf9f7;
+}
+
+/* line 27, ../sass/style_display.scss */
+.background-display {
+  -moz-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -moz-transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+}
