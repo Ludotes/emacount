@@ -1,1 +1,1 @@
-EMACount is a web pplication usefull for setting fire in parties.
+EMACount is a web application useful for setting fire in parties.
