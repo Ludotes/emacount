@@ -3,28 +3,13 @@
 var EmacountApp;
 
 EmacountApp.controller('DisplayCtrl', ['$scope','$interval', '$timeout','TeamsFactory',function($scope,$interval,$timeout,TeamsFactory){
-    $scope.isKiss = false;
-    $scope.isHeaven = false;
-
-    /* Calcul du nombre de secondes jusqu'à la prochaine heure */
-    var now = new Date();
-    $scope.purgaboire = 60*60 - now.getMinutes()*60 + now.getSeconds();
+    /* Couleurs */
+    var colors = ["#a3df00", "#6000ff", "#0060ff", "#ff0072", "#00ffde","#df4f00", "#00c921","#ff00f0","#df9300",  "#ff0000"];
 
     /* Récupération des données */
     var getTeams = function(){
         TeamsFactory.getTeams().then(function(teams){
             $scope.teams = teams;
-
-            /* Changement de l'état en fonction du score */
-            if(parseInt($scope.teams[0].Team.points) >= parseInt($scope.teams[1].Team.points)){
-                // Heaven
-                $scope.state = 'heaven';
-                $scope.isHeaven = true;
-            }else{
-                // Hell
-                $scope.state = 'hell';
-                $scope.isHeaven = false;
-            }
         }, function(msg){
             console.log(msg);
         });
@@ -51,17 +36,7 @@ EmacountApp.controller('DisplayCtrl', ['$scope','$interval', '$timeout','TeamsFa
                     }
                 }
             },
-             series: [{
-                    name: ['Anges'],
-                    lineWidth: 10,
-                    data: []
-                },
-                {
-                    name: ['Démons'],
-                    lineWidth: 10,
-                    data: []
-                }
-             ],
+             series: [],
              title: {
                  text: ''
              },
@@ -82,10 +57,34 @@ EmacountApp.controller('DisplayCtrl', ['$scope','$interval', '$timeout','TeamsFa
      */
     var refreshGraphe = function(){
         console.log('Refreshing...');
-        // Récupération des points du scope et ajout dans le tableau
-        var arraySeries = $scope.chartConfig.series;
-        for (var i = 0; i<$scope.teams.length; i++){
-            arraySeries[i].data = arraySeries[i].data.concat([parseInt($scope.teams[i].Team.points)]);
+
+        // Y-a-t'il une nouvelle serie
+        if($scope.chartConfig.series.length !== $scope.teams.length){
+            var lenghtArraySeriesInit = $scope.chartConfig.series.length;
+            var nbrNlleSerie = $scope.teams.length - $scope.chartConfig.series.length;
+
+            /* Test si nouvelle série */
+            for(var i = lenghtArraySeriesInit; i < lenghtArraySeriesInit + nbrNlleSerie; i++){
+                // Ajout de la serie
+                $scope.chartConfig.series = $scope.chartConfig.series.concat([{
+                    name: $scope.teams[i].Team.name,
+                    lineWidth: 10,
+                    data: [],
+                    color: colors[i]
+                }]);
+
+                // Ajout des zéros dans le data
+                if($scope.chartConfig.series[0] !== 'undefined'){
+                    for(var k=0; k < $scope.chartConfig.series[0].data.length; k++){
+                        $scope.chartConfig.series[i].data = $scope.chartConfig.series[i].data.concat(0);
+                    }
+                }
+            }
+        }
+
+        /* Mise à jour des scores */
+        for (var j = 0; j<$scope.teams.length; j++){
+            $scope.chartConfig.series[j].data = $scope.chartConfig.series[j].data.concat([parseInt($scope.teams[j].Team.points)]);
         }
         console.log('Done!');
     };
@@ -94,19 +93,4 @@ EmacountApp.controller('DisplayCtrl', ['$scope','$interval', '$timeout','TeamsFa
      * Appel automatique et régulier de la fonction de rafraichissement du graphe
      */
     $interval(refreshGraphe, 10000);
-
-    /* Callback timer : évènement déclanché lorsque le timer est terminé */
-    $scope.callbackTimer = function(){
-        // Ouverture du PURGABOIRE !
-        $scope.isKiss = true;
-        // Remise à zéro du compte à rebours après XXsec
-        $timeout(function(){
-            var arraySeries = $scope.chartConfig.series;
-             for (var i = 0; i<$scope.teams.length; i++){
-                arraySeries[i].data = [];
-            }
-            $scope.isKiss = false;
-            $scope.$broadcast('timer-start');
-        },60000);
-    };
 }]);

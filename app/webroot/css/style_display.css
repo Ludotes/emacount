@@ -2,26 +2,11 @@
 /* Colors */
 /* Background */
 /* line 11, ../sass/style_display.scss */
-.hell.background-display {
-  background-color: black;
-  background: url(../img/fire.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.background-display {
+  background-color: white;
 }
 
-/* line 19, ../sass/style_display.scss */
-.heaven.background-display {
-  background-color: #edf9f7;
-  background: url(../img/heaven.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/* line 28, ../sass/style_display.scss */
+/* line 15, ../sass/style_display.scss */
 .background-display {
   -moz-transition-property: background-image;
   -webkit-transition-property: background-image;
@@ -31,45 +16,45 @@
   transition-duration: 2s;
 }
 
-/* line 33, ../sass/style_display.scss */
+/* line 20, ../sass/style_display.scss */
 .progress-bar {
   background-color: #7a7a7a;
 }
 
 /* Text style */
-/* line 38, ../sass/style_display.scss */
+/* line 25, ../sass/style_display.scss */
 .points {
   font-size: 90px;
 }
 
-/* line 42, ../sass/style_display.scss */
+/* line 29, ../sass/style_display.scss */
 .textshadow {
   text-shadow: #fff 2px 0px 0px, #fff 2px 2px 0px, #fff 2px -2px 0px, #fff -2px 2px 0px, #fff -2px 0px 0px, #fff -2px -2px 0px, #fff 0px 2px 0px, #fff 0px -2px 0px;
 }
 
-/* line 46, ../sass/style_display.scss */
+/* line 33, ../sass/style_display.scss */
 .textshadowlight {
   text-shadow: #fff 1px 0px 0px, #fff 1px 1px 0px, #fff 1px -1px 0px, #fff -1px 1px 0px, #fff -1px 0px 0px, #fff -1px -1px 0px, #fff 0px 1px 0px, #fff 0px -1px 0px;
 }
 
 /* Blocks */
-/* line 51, ../sass/style_display.scss */
+/* line 38, ../sass/style_display.scss */
 .team-name {
   margin-top: -15px;
 }
 
-/* line 55, ../sass/style_display.scss */
+/* line 42, ../sass/style_display.scss */
 .img-vs {
   width: 90%;
   margin-top: 20%;
 }
 
-/* line 60, ../sass/style_display.scss */
+/* line 47, ../sass/style_display.scss */
 .chart {
   margin-top: 30px;
 }
 
-/* line 64, ../sass/style_display.scss */
+/* line 51, ../sass/style_display.scss */
 .timing {
   background-color: rgba(0, 0, 0, 0.7);
   width: 170px;
@@ -80,18 +65,18 @@
   margin-left: 45%;
 }
 
-/* line 74, ../sass/style_display.scss */
+/* line 61, ../sass/style_display.scss */
 .footer {
   height: 40px;
 }
 
-/* line 78, ../sass/style_display.scss */
+/* line 65, ../sass/style_display.scss */
 .progress {
   margin-top: 20px;
   background-color: #d6d6d6;
 }
 
-/* line 83, ../sass/style_display.scss */
+/* line 70, ../sass/style_display.scss */
 .popup {
   position: absolute;
   width: 99%;
@@ -103,23 +88,23 @@
   font-weight: bold;
 }
 
-/* line 94, ../sass/style_display.scss */
+/* line 81, ../sass/style_display.scss */
 .popup.hell {
   background-color: #000;
   color: #FFF;
 }
 
-/* line 98, ../sass/style_display.scss */
+/* line 85, ../sass/style_display.scss */
 .popup.heaven {
   background-color: #FFF;
 }
 
-/* line 102, ../sass/style_display.scss */
+/* line 89, ../sass/style_display.scss */
 .img-pop {
   max-height: 80%;
 }
 
-/* line 106, ../sass/style_display.scss */
+/* line 93, ../sass/style_display.scss */
 .pop-title {
   margin-top: 30px;
 }

@@ -8,21 +8,8 @@ $heaven-color-dark: #b2eae7;
 $heaven-color-bright: #edf9f7;
 
 /* Background */
-.hell.background-display{
-    background-color: black;
-    background: url(../img/fire.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.heaven.background-display{
-    background-color: $heaven-color-bright;
-    background: url(../img/heaven.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.background-display{
+    background-color: white;
 }
 
 .background-display{
