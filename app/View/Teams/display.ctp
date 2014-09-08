@@ -2,38 +2,21 @@
 <div class="background-display" ng-controller="DisplayCtrl" ng-class="state">
     <div class="container-fluid">
         <!--  Equipes  -->
-        <div class="row text-center bite">
-            <!-- Anges -->
-            <div class="col-xs-4 col-xs-offset-1 block-team">
+        <div class="row text-center">
+            <!--  -->
+            <div class="col-xs-3 block-team" ng-repeat="team in teams">
                 <!-- well -->
                 <div class="row well-team">
                     <div class="col-xs-12">
                         <!-- Score de l'équipe -->
                         <div class="row">
                             <div class="col-xs-12">
-                                <h1 class="points textshadow">{{teams[0].Team.points}}</h1>
-                                <h1 class="team-name textshadowlight">{{teams[0].Team.name}}</h1>
+                                <h1 class="points textshadow">{{team.Team.points}}</h1>
+                                <h1 class="team-name textshadowlight">{{team.Team.name}}</h1>
                             </div>
                         </div><!-- endScore -->
                     </div><!-- col -->
                 </div><!--row -->
-            </div><!-- col -->
-
-            <!-- VS -->
-            <div class="col-xs-2">
-                <?= $this->Html->image('vs.png', array('alt'=>'vs', 'class'=>'img-vs', 'ng-click' => 'isKiss=true')); ?>
-            </div>
-
-            <!-- Démons -->
-            <div class="col-xs-4">
-                <!-- well -->
-                <div class="row well-team">
-                    <!-- Score de l'équipe -->
-                    <div class="col-xs-12">
-                        <h1 class="points textshadow">{{teams[1].Team.points}}</h1>
-                        <h1 class="team-name textshadowlight">{{teams[1].Team.name}}</h1>
-                    </div>
-                </div>
             </div><!-- col -->
         </div><!-- row -->
 

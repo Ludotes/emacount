@@ -1,6 +1,7 @@
 /* Imports */
 /* Colors */
-/* line 10, ../sass/style_display.scss */
+/* Background */
+/* line 11, ../sass/style_display.scss */
 .hell.background-display {
   background-color: black;
   background: url(../img/fire.jpg) no-repeat center center fixed;
@@ -10,7 +11,7 @@
   background-size: cover;
 }
 
-/* line 18, ../sass/style_display.scss */
+/* line 19, ../sass/style_display.scss */
 .heaven.background-display {
   background-color: #edf9f7;
   background: url(../img/heaven.jpg) no-repeat center center fixed;
@@ -20,7 +21,7 @@
   background-size: cover;
 }
 
-/* line 27, ../sass/style_display.scss */
+/* line 28, ../sass/style_display.scss */
 .background-display {
   -moz-transition-property: background-image;
   -webkit-transition-property: background-image;
@@ -30,38 +31,45 @@
   transition-duration: 2s;
 }
 
-/* line 32, ../sass/style_display.scss */
+/* line 33, ../sass/style_display.scss */
+.progress-bar {
+  background-color: #7a7a7a;
+}
+
+/* Text style */
+/* line 38, ../sass/style_display.scss */
 .points {
-  font-size: 180px;
+  font-size: 90px;
 }
 
-/* line 36, ../sass/style_display.scss */
-.team-name {
-  margin-top: -15px;
-}
-
-/* line 40, ../sass/style_display.scss */
+/* line 42, ../sass/style_display.scss */
 .textshadow {
   text-shadow: #fff 2px 0px 0px, #fff 2px 2px 0px, #fff 2px -2px 0px, #fff -2px 2px 0px, #fff -2px 0px 0px, #fff -2px -2px 0px, #fff 0px 2px 0px, #fff 0px -2px 0px;
 }
 
-/* line 44, ../sass/style_display.scss */
+/* line 46, ../sass/style_display.scss */
 .textshadowlight {
   text-shadow: #fff 1px 0px 0px, #fff 1px 1px 0px, #fff 1px -1px 0px, #fff -1px 1px 0px, #fff -1px 0px 0px, #fff -1px -1px 0px, #fff 0px 1px 0px, #fff 0px -1px 0px;
 }
 
-/* line 48, ../sass/style_display.scss */
+/* Blocks */
+/* line 51, ../sass/style_display.scss */
+.team-name {
+  margin-top: -15px;
+}
+
+/* line 55, ../sass/style_display.scss */
 .img-vs {
   width: 90%;
   margin-top: 20%;
 }
 
-/* line 53, ../sass/style_display.scss */
+/* line 60, ../sass/style_display.scss */
 .chart {
   margin-top: 30px;
 }
 
-/* line 57, ../sass/style_display.scss */
+/* line 64, ../sass/style_display.scss */
 .timing {
   background-color: rgba(0, 0, 0, 0.7);
   width: 170px;
@@ -72,28 +80,18 @@
   margin-left: 45%;
 }
 
-/* line 67, ../sass/style_display.scss */
+/* line 74, ../sass/style_display.scss */
 .footer {
   height: 40px;
 }
 
-/* line 71, ../sass/style_display.scss */
-.bite {
-  margin-top: 20px;
-}
-
-/* line 75, ../sass/style_display.scss */
+/* line 78, ../sass/style_display.scss */
 .progress {
   margin-top: 20px;
   background-color: #d6d6d6;
 }
 
-/* line 80, ../sass/style_display.scss */
-.progress-bar {
-  background-color: #7a7a7a;
-}
-
-/* line 84, ../sass/style_display.scss */
+/* line 83, ../sass/style_display.scss */
 .popup {
   position: absolute;
   width: 99%;
@@ -105,23 +103,23 @@
   font-weight: bold;
 }
 
-/* line 95, ../sass/style_display.scss */
+/* line 94, ../sass/style_display.scss */
 .popup.hell {
   background-color: #000;
   color: #FFF;
 }
 
-/* line 99, ../sass/style_display.scss */
+/* line 98, ../sass/style_display.scss */
 .popup.heaven {
   background-color: #FFF;
 }
 
-/* line 103, ../sass/style_display.scss */
+/* line 102, ../sass/style_display.scss */
 .img-pop {
   max-height: 80%;
 }
 
-/* line 107, ../sass/style_display.scss */
+/* line 106, ../sass/style_display.scss */
 .pop-title {
   margin-top: 30px;
 }

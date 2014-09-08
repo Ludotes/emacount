@@ -7,6 +7,7 @@ $hell-color-bright: #f50000;
 $heaven-color-dark: #b2eae7;
 $heaven-color-bright: #edf9f7;
 
+/* Background */
 .hell.background-display{
     background-color: black;
     background: url(../img/fire.jpg) no-repeat center center fixed;
@@ -29,12 +30,13 @@ $heaven-color-bright: #edf9f7;
     @include transition-duration(2s);
 }
 
-.points{
-    font-size: 180px;
+.progress-bar {
+    background-color: #7a7a7a;
 }
 
-.team-name{
-    margin-top: -15px;
+/* Text style */
+.points{
+    font-size: 90px;
 }
 
 .textshadow{
@@ -43,6 +45,11 @@ $heaven-color-bright: #edf9f7;
 
 .textshadowlight{
     text-shadow: #fff 1px 0px 0px, #fff 1px 1px 0px, #fff 1px -1px 0px, #fff -1px 1px 0px, #fff -1px 0px 0px, #fff -1px -1px 0px, #fff 0px 1px 0px, #fff 0px -1px 0px;
+}
+
+/* Blocks */
+.team-name{
+    margin-top: -15px;
 }
 
 .img-vs{
@@ -68,17 +75,9 @@ $heaven-color-bright: #edf9f7;
     height:40px;
 }
 
-.bite{
-    margin-top:20px;
-}
-
 .progress {
     margin-top: 20px;
     background-color: #d6d6d6;
-}
-
-.progress-bar {
-    background-color: #7a7a7a;
 }
 
 .popup{
