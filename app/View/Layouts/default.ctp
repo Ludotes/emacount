@@ -61,7 +61,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
      <?php echo $this->Html->script('controllers/admin_ctrl'); ?>
      <?php echo $this->Html->script('controllers/display_ctrl'); ?>
     <!-- Factories -->
+    <?php echo $this->Html->script('factories/memoize'); ?>
+    <?php echo $this->Html->script('factories/filter-stabilize'); ?>
     <?php echo $this->Html->script('factories/teams_factory'); ?>
     <?php echo $this->Html->script('factories/admin_factory'); ?>
+    <!-- Filters -->
+    <?php echo $this->Html->script('filters/partition.js');?>
 </body>
 </html>

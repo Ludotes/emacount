@@ -8,8 +8,8 @@ $heaven-color-dark: #b2eae7;
 $heaven-color-bright: #edf9f7;
 
 /* Background */
-.background-display{
-    background-color: white;
+body{
+    background-color: black;
 }
 
 .background-display{
@@ -30,11 +30,10 @@ $heaven-color-bright: #edf9f7;
     text-shadow: #fff 2px 0px 0px, #fff 2px 2px 0px, #fff 2px -2px 0px, #fff -2px 2px 0px, #fff -2px 0px 0px, #fff -2px -2px 0px, #fff 0px 2px 0px, #fff 0px -2px 0px;
 }
 
-.textshadowlight{
-    text-shadow: #fff 1px 0px 0px, #fff 1px 1px 0px, #fff 1px -1px 0px, #fff -1px 1px 0px, #fff -1px 0px 0px, #fff -1px -1px 0px, #fff 0px 1px 0px, #fff 0px -1px 0px;
-}
-
 /* Blocks */
+.block-team{
+    padding: 10px 30px 10px 30px;
+}
 .team-name{
     margin-top: -15px;
 }
@@ -45,51 +44,5 @@ $heaven-color-bright: #edf9f7;
 }
 
 .chart{
-    margin-top: 30px;
-}
-
-.timing{
-    background-color: rgba(0, 0, 0, 0.7);
-    width:170px;
-    height:70px;
-    border-radius: 10px;
-    border : 1px solid white;
-    color:white;
-    margin-left:45%;
-}
-
-.footer {
-    height:40px;
-}
-
-.progress {
-    margin-top: 20px;
-    background-color: #d6d6d6;
-}
-
-.popup{
-    position:absolute;
-    width:99%;
-    height:99%;
-    top:0.5%;
-    left:0.5%;
-    box-shadow: 1px 1px 102px #000;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.popup.hell{
-    background-color: #000;
-    color: #FFF;
-}
-.popup.heaven{
-    background-color: #FFF;
-}
-
-.img-pop{
-    max-height: 80%;
-}
-
-.pop-title{
     margin-top: 30px;
 }

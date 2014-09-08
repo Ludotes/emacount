@@ -4,12 +4,45 @@ var EmacountApp;
 
 EmacountApp.controller('DisplayCtrl', ['$scope','$interval', '$timeout','TeamsFactory',function($scope,$interval,$timeout,TeamsFactory){
     /* Couleurs */
-    var colors = ["#a3df00", "#6000ff", "#0060ff", "#ff0072", "#00ffde","#df4f00", "#00c921","#ff00f0","#df9300",  "#ff0000"];
+    var colors = ['#a3df00', '#6000ff', '#0060ff', '#ff0072', '#00ffde','#df4f00', '#00c921','#ff00f0','#df9300',  '#ff0000'];
 
     /* Récupération des données */
     var getTeams = function(){
         TeamsFactory.getTeams().then(function(teams){
+            /* Récupération des données */
             $scope.teams = teams;
+
+            /* Mise en place de la disposition des lignes et colonnes des teams */
+            $scope.colDisposition = [];
+
+            var modulo = $scope.teams.length % 4;
+            var multiple = parseInt($scope.teams.length / 4);
+            var indexSurplus = 4 * multiple + 1;
+            for(var i = 0; i < $scope.teams.length - modulo; i++){
+                $scope.colDisposition.push('col-xs-3');
+                $scope.teams[i].Team.position = i;
+            }
+            switch(modulo){
+                case 0:
+                    break;
+                case 1:
+                    $scope.colDisposition.push('col-xs-6 col-xs-offset-3');
+                    $scope.teams[indexSurplus - 1].Team.position = indexSurplus - 1;
+                    break;
+                case 2:
+                    for(var j = indexSurplus; j <= $scope.teams.length; j++){
+                        $scope.colDisposition.push('col-xs-6');
+                        $scope.teams[j - 1].Team.position = j - 1;
+                    }
+                    break;
+                case 3:
+                    for(var j = indexSurplus; j<= $scope.teams.length; j++){
+                        $scope.colDisposition.push('col-xs-4');
+                        $scope.teams[j - 1].Team.position = j - 1;
+                    }
+                    break;
+            }
+            console.log($scope.colDisposition);
         }, function(msg){
             console.log(msg);
         });
