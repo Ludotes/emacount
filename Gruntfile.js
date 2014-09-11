@@ -7,7 +7,10 @@ module.exports = function(grunt) {
             all: ['Gruntfile.js',
                 'app/webroot/js/**/*.js',
                 '!app/webroot/js/components/*.js',
-                '!app/webroot/js/app.js'],
+                '!app/webroot/js/app.js',
+                '!app/webroot/js/filters/partition.js',
+                '!app/webroot/js/factories/filter-stabilize.js',
+                '!app/webroot/js/factories/memoize.js'],
             options: {
                 jshintrc: '.jshintrc'
             }

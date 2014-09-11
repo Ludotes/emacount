@@ -1,6 +1,9 @@
 <?php echo $this->Html->css('style_display'); ?>
 <div class="background-display" ng-controller="DisplayCtrl">
     <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 text-center"><h1>Soirée BDS</h1></div>
+    </div>
         <!--  Equipes  -->
         <div class="text-center row" ng-repeat="teams_row in teams | pmkr.partition:4">
             <!--  -->
@@ -22,11 +25,10 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="row">
-            <div class="col-xs-12 text-right">
-                Created by DevTeam. Support us by making good parties!
-            </div>
+    <div class="row footer">
+        <div class="col-xs-12 text-right">
+            <p>Created by the DevTeam of Mines d'Alès. Support us by making good parties!</p>
+            <p>You can also send us an <a href="mailto:ludovic@sintes.com">email</a> or <a href="https://github.com/DJRanium/emacount">contribute to the projet.</a></p>
         </div>
     </div>
 </div>

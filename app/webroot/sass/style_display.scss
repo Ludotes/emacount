@@ -1,48 +1,58 @@
 /* Imports */
-@import "compass/css3/transition";
+@import "compass";
 
 /* Colors */
-$hell-color-dark: #9c0001;
-$hell-color-bright: #f50000;
-$heaven-color-dark: #b2eae7;
-$heaven-color-bright: #edf9f7;
+$background: white;
+$background-charts: #e2e2e2;
+$background-teams: #ae133a;
+$font-generic:  black;
+$font-teams: white;
+$font-teams-around: #7e0927;
 
 /* Background */
 body{
-    background-color: black;
-}
-
-.background-display{
-    @include transition-property(background-image);
-    @include transition-duration(2s);
-}
-
-.progress-bar {
-    background-color: #7a7a7a;
+    background-color: $background;
+    color: $font-generic;
 }
 
 /* Text style */
 .points{
     font-size: 90px;
+    color: $font-teams;
+}
+.team-name{
+    color: $font-teams;
 }
 
 .textshadow{
-    text-shadow: #fff 2px 0px 0px, #fff 2px 2px 0px, #fff 2px -2px 0px, #fff -2px 2px 0px, #fff -2px 0px 0px, #fff -2px -2px 0px, #fff 0px 2px 0px, #fff 0px -2px 0px;
+    @include text-shadow($font-teams-around 2px 0px 0px, $font-teams-around 2px 2px 0px, $font-teams-around 2px -2px 0px, $font-teams-around -2px 2px 0px, $font-teams-around -2px 0px 0px, $font-teams-around -2px -2px 0px, $font-teams-around 0px 2px 0px, $font-teams-around 0px -2px 0px);
 }
 
 /* Blocks */
 .block-team{
     padding: 10px 30px 10px 30px;
+    .row{
+        @include box-shadow(#c9c9c9 0px 0px 3px);
+        @include border-radius(10px);
+            background-color: $background-teams;
+    }
 }
+
 .team-name{
     margin-top: -15px;
 }
 
-.img-vs{
-    width: 90%;
-    margin-top:20%;
-}
-
 .chart{
     margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 10px;
+    background-color: $background-charts;
+    @include box-shadow(#c9c9c9 0px 0px 3px);
+    @include border-radius(10px);
+}
+
+.footer{
+    font-weight: bold;
+    font-style: italic;
+    margin: 0px;
 }

@@ -22,6 +22,7 @@ class TeamsController extends AppController {
  */
 	public function admin(){
 		$this->set('teams', $this->Team->find('all'));
+		$this->layout = 'admin';
 	}
 
 /**
@@ -39,6 +40,7 @@ class TeamsController extends AppController {
 	public function index() {
 		$this->Team->recursive = 0;
 		$this->set('teams', $this->Paginator->paginate());
+		$this->layout = 'admin';
 	}
 
 /**
@@ -54,6 +56,7 @@ class TeamsController extends AppController {
 		}
 		$options = array('conditions' => array('Team.' . $this->Team->primaryKey => $id));
 		$this->set('team', $this->Team->find('first', $options));
+		$this->layout = 'admin';
 	}
 
 /**
@@ -71,6 +74,7 @@ class TeamsController extends AppController {
 				$this->Session->setFlash(__('The team could not be saved. Please, try again.'));
 			}
 		}
+		$this->layout = 'admin';
 	}
 
 /**

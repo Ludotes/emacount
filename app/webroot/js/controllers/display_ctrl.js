@@ -36,9 +36,9 @@ EmacountApp.controller('DisplayCtrl', ['$scope','$interval', '$timeout','TeamsFa
                     }
                     break;
                 case 3:
-                    for(var j = indexSurplus; j<= $scope.teams.length; j++){
+                    for(var k = indexSurplus; k<= $scope.teams.length; k++){
                         $scope.colDisposition.push('col-xs-4');
-                        $scope.teams[j - 1].Team.position = j - 1;
+                        $scope.teams[k - 1].Team.position = k - 1;
                     }
                     break;
             }
@@ -77,7 +77,8 @@ EmacountApp.controller('DisplayCtrl', ['$scope','$interval', '$timeout','TeamsFa
               title: {text: ''}
              },
              yAxis: {
-                title:{text: ''}
+                title:{text: ''},
+                min: 0
              }
     };
 

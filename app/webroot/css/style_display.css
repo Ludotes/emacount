@@ -1,55 +1,67 @@
 /* Imports */
 /* Colors */
 /* Background */
-/* line 11, ../sass/style_display.scss */
+/* line 13, ../sass/style_display.scss */
 body {
-  background-color: black;
-}
-
-/* line 15, ../sass/style_display.scss */
-.background-display {
-  -moz-transition-property: background-image;
-  -webkit-transition-property: background-image;
-  transition-property: background-image;
-  -moz-transition-duration: 2s;
-  -webkit-transition-duration: 2s;
-  transition-duration: 2s;
-}
-
-/* line 20, ../sass/style_display.scss */
-.progress-bar {
-  background-color: #7a7a7a;
+  background-color: white;
+  color: black;
 }
 
 /* Text style */
-/* line 25, ../sass/style_display.scss */
+/* line 19, ../sass/style_display.scss */
 .points {
   font-size: 90px;
+  color: white;
 }
 
-/* line 29, ../sass/style_display.scss */
+/* line 23, ../sass/style_display.scss */
+.team-name {
+  color: white;
+}
+
+/* line 27, ../sass/style_display.scss */
 .textshadow {
-  text-shadow: #fff 2px 0px 0px, #fff 2px 2px 0px, #fff 2px -2px 0px, #fff -2px 2px 0px, #fff -2px 0px 0px, #fff -2px -2px 0px, #fff 0px 2px 0px, #fff 0px -2px 0px;
+  text-shadow: #7e0927 2px 0px 0px, #7e0927 2px 2px 0px, #7e0927 2px -2px 0px, #7e0927 -2px 2px 0px, #7e0927 -2px 0px 0px, #7e0927 -2px -2px 0px, #7e0927 0px 2px 0px, #7e0927 0px -2px 0px;
 }
 
 /* Blocks */
-/* line 34, ../sass/style_display.scss */
+/* line 32, ../sass/style_display.scss */
 .block-team {
   padding: 10px 30px 10px 30px;
 }
+/* line 34, ../sass/style_display.scss */
+.block-team .row {
+  -moz-box-shadow: #c9c9c9 0px 0px 3px;
+  -webkit-box-shadow: #c9c9c9 0px 0px 3px;
+  box-shadow: #c9c9c9 0px 0px 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #ae133a;
+}
 
-/* line 37, ../sass/style_display.scss */
+/* line 41, ../sass/style_display.scss */
 .team-name {
   margin-top: -15px;
 }
 
-/* line 41, ../sass/style_display.scss */
-.img-vs {
-  width: 90%;
-  margin-top: 20%;
-}
-
-/* line 46, ../sass/style_display.scss */
+/* line 45, ../sass/style_display.scss */
 .chart {
   margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: #e2e2e2;
+  -moz-box-shadow: #c9c9c9 0px 0px 3px;
+  -webkit-box-shadow: #c9c9c9 0px 0px 3px;
+  box-shadow: #c9c9c9 0px 0px 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 54, ../sass/style_display.scss */
+.footer {
+  font-weight: bold;
+  font-style: italic;
+  margin: 0px;
 }
