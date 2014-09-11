@@ -3,3 +3,8 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* line 6, ../sass/style_admin.scss */
+.admin {
+  font-size: 10px;
+}

@@ -21,7 +21,7 @@ body {
 
 /* line 27, ../sass/style_display.scss */
 .textshadow {
-  text-shadow: #7e0927 2px 0px 0px, #7e0927 2px 2px 0px, #7e0927 2px -2px 0px, #7e0927 -2px 2px 0px, #7e0927 -2px 0px 0px, #7e0927 -2px -2px 0px, #7e0927 0px 2px 0px, #7e0927 0px -2px 0px;
+  text-shadow: black 2px 0px 0px, black 2px 2px 0px, black 2px -2px 0px, black -2px 2px 0px, black -2px 0px 0px, black -2px -2px 0px, black 0px 2px 0px, black 0px -2px 0px;
 }
 
 /* Blocks */
@@ -37,15 +37,14 @@ body {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background-color: #ae133a;
 }
 
-/* line 41, ../sass/style_display.scss */
+/* line 40, ../sass/style_display.scss */
 .team-name {
   margin-top: -15px;
 }
 
-/* line 45, ../sass/style_display.scss */
+/* line 44, ../sass/style_display.scss */
 .chart {
   margin-top: 30px;
   margin-bottom: 50px;
@@ -59,7 +58,7 @@ body {
   border-radius: 10px;
 }
 
-/* line 54, ../sass/style_display.scss */
+/* line 53, ../sass/style_display.scss */
 .footer {
   font-weight: bold;
   font-style: italic;

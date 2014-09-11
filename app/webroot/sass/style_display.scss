@@ -7,7 +7,7 @@ $background-charts: #e2e2e2;
 $background-teams: #ae133a;
 $font-generic:  black;
 $font-teams: white;
-$font-teams-around: #7e0927;
+$font-teams-around: #000;
 
 /* Background */
 body{
@@ -34,7 +34,6 @@ body{
     .row{
         @include box-shadow(#c9c9c9 0px 0px 3px);
         @include border-radius(10px);
-            background-color: $background-teams;
     }
 }
 
