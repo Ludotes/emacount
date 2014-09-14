@@ -29,4 +29,4 @@ For exemple, if you want to make a Angels vs Devils' party, you may want to have
 
 It may look very simple and not very intersting but it can be terrible if you manage the ambience very well during your party.
 
-This application was created by Guillaume FAYEMI and Ludovic SINTES, students of l'Ecole des mines d'Alès in France.
+This application was created by Ludovic SINTES and Guillaume FAYEMI, students of l'Ecole des mines d'Alès in France.
