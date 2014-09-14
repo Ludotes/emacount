@@ -1,50 +1,32 @@
-<<<<<<< HEAD
-CakePHP
-=======
+# EMACOUNT
 
-[![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
+## Server installation :
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+* **Install a web server**. You can use lamp emulators or wamp, xamp, etc. Be sure to activate apache's mod_rewrite. If you want more infos about the installation of the web server, see the [page of CakePHP](http://book.cakephp.org/2.0/en/installation.html)
 
-Some Handy Links
-----------------
+* **Modify the database configuration** by editing the file ``/app/database.php``. Change the $default configuration
 
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
+* **Test the application** by going to the page ``http://your_server_name/admin``. If you can see the page, it is working! If you can't, read the error sent by CakePHP and find a solution on their documention.
 
-[CookBook](http://book.cakephp.org) - THE CakePHP user documentation; start learning here!
+## Administration and displaying :
 
-[API](http://api.cakephp.org) - A reference to CakePHP's classes
+* **Install an admin machine** by opening the page ``http://your_server_name/admin/`` on a computer. It has to be near the bar, where drinks are payed.
 
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
+* **Install displayers** by opening the page ``http://your_server_name/`` on computers
 
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
+## Managing :
 
-[Community Center](http://community.cakephp.org) - A source for everything community related
+* **Manage the teams** on the page ``http://your_server_name/admin/index``
 
-[Training](http://training.cakephp.org) - Join a live session and get skilled with the framework
+* **Add a team** by visiting the page ``http://your_server_name/admin/add``
 
-[CakeFest](http://cakefest.org) - Don't miss our annual CakePHP conference
+* **Manage the points** on the page ``http://your_server_name/admin``
 
-[Cake Software Foundation](http://cakefoundation.org) - Promoting development related to CakePHP
+## About
+Emacount is a web application of counting scores between teams during parties.
 
-Get Support!
-------------
+For exemple, if you want to make a Angels vs Devils' party, you may want to have this application. Each person choose a side and each time he by a drink, his team earn a point!
 
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake
+It may look very simple and not very intersting but it can be terrible if you manage the ambience very well during your party.
 
-[Google Group](https://groups.google.com/group/cake-php) - Community mailing list and forum
-
-[GitHub Issues](https://github.com/cakephp/cakephp/issues) - Got issues? Please tell us!
-
-[Roadmaps](https://github.com/cakephp/cakephp/wiki#roadmaps) - Want to contribute? Get involved!
-
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
-
-![Cake Power](https://raw.github.com/cakephp/cakephp/master/lib/Cake/Console/Templates/skel/webroot/img/cake.power.gif)
-=======
-emacount
-========
-
-EMACount is a web application usefull for setting fire in parties.
->>>>>>> 2bd23e66bcbcce4827582a1121cd83407edb875a
+This application was created by Guillaume FAYEMI and Ludovic SINTES, students of l'Ecole des mines d'Alès in France.
