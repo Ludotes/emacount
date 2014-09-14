@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # EMACOUNT
 
 ## Server installation :
@@ -31,10 +30,3 @@ For exemple, if you want to make a Angels vs Devils' party, you may want to have
 It may look very simple and not very intersting but it can be terrible if you manage the ambience very well during your party.
 
 This application was created by Guillaume FAYEMI and Ludovic SINTES, students of l'Ecole des mines d'Alès in France.
-=======
-EMACount is a web application useful for setting fire in parties.
-
-Be pleased to contribute to this project by sending your photos of your awesome parties.
-
-Created by Guillaume FAYEMI and Ludovic SINTES, DevTeam of le Cercle des Elèves de l'Ecole des mines d'Alès.
->>>>>>> f8512c9f9f65e478506fa14f964a4f5c9b29e73e
