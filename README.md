@@ -22,7 +22,7 @@
 
 * **Manage the points** on the page ``http://your_server_name/admin``
 
-## About
+## About :
 Emacount is a web application of counting scores between teams during parties.
 
 For exemple, if you want to make a Angels vs Devils' party, you may want to have this application. Each person choose a side and each time he by a drink, his team earn a point!
