@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <br/>
-            </div>
-        </div>
-    </div>
-</div>
+            </div><!-- well -->
+        </div><!-- ng-repeat teams_row -->
+    </div><!-- ng-repeat teams -->
+</div><!-- controller -->

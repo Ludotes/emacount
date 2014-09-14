@@ -63,6 +63,16 @@
         <?php echo $this->fetch('content'); ?>
     </div>
 
+    <!-- Footer -->
+      <div class="container">
+        <div class="row well">
+            <div class="col-xs-12">
+                <p><em>Created by Ludovic 'SpaceDev' SINTES and Guillaume 'ShadowDev' FAYEMI, DevTeam of les Mines d'Alès. Please support us by making amazing parties !</em></p>
+                <p><em><a href="https://github.com/DJRanium/emacount"><span class="glyphicon glyphicon-cloud"></span> Github</a> <a href="mailto:spacedev123@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Contact</a></em></p>
+            </div>
+        </div>
+      </div>
+
 <!-- Scripts -->
     <!-- Script de récupération d'url -->
     <script type="text/javascript">
