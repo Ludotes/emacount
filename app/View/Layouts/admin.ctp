@@ -19,7 +19,6 @@
     ?>
 </head>
 <body ng-app="EmacountApp">
-    <?php echo $this->Session->flash(); ?>
     <!-- Navbar -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
@@ -55,6 +54,9 @@
             </div>
         </div>
     </nav>
+
+    <!-- Flashzone -->
+    <?php echo $this->Session->flash(); ?>
 
     <!-- Contenu -->
     <div class="container">

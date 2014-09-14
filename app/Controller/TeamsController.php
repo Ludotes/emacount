@@ -44,22 +44,6 @@ class TeamsController extends AppController {
 	}
 
 /**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		if (!$this->Team->exists($id)) {
-			throw new NotFoundException(__('Invalid team'));
-		}
-		$options = array('conditions' => array('Team.' . $this->Team->primaryKey => $id));
-		$this->set('team', $this->Team->find('first', $options));
-		$this->layout = 'admin';
-	}
-
-/**
  * add method
  *
  * @return void
