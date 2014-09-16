@@ -1,0 +1,109 @@
+/* Imports */
+@import "compass/css3/transition";
+
+/* Colors */
+$hell-color-dark: #9c0001;
+$hell-color-bright: #f50000;
+$heaven-color-dark: #b2eae7;
+$heaven-color-bright: #edf9f7;
+
+.hell.background-display{
+    background-color: black;
+    background: url(../img/fire.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.heaven.background-display{
+    background-color: $heaven-color-bright;
+    background: url(../img/heaven.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.background-display{
+    @include transition-property(background-image);
+    @include transition-duration(2s);
+}
+
+.points{
+    font-size: 180px;
+}
+
+.team-name{
+    margin-top: -15px;
+}
+
+.textshadow{
+    text-shadow: #fff 2px 0px 0px, #fff 2px 2px 0px, #fff 2px -2px 0px, #fff -2px 2px 0px, #fff -2px 0px 0px, #fff -2px -2px 0px, #fff 0px 2px 0px, #fff 0px -2px 0px;
+}
+
+.textshadowlight{
+    text-shadow: #fff 1px 0px 0px, #fff 1px 1px 0px, #fff 1px -1px 0px, #fff -1px 1px 0px, #fff -1px 0px 0px, #fff -1px -1px 0px, #fff 0px 1px 0px, #fff 0px -1px 0px;
+}
+
+.img-vs{
+    width: 90%;
+    margin-top:20%;
+}
+
+.chart{
+    margin-top: 30px;
+}
+
+.timing{
+    background-color: rgba(0, 0, 0, 0.7);
+    width:170px;
+    height:70px;
+    border-radius: 10px;
+    border : 1px solid white;
+    color:white;
+    margin-left:45%;
+}
+
+.footer {
+    height:40px;
+}
+
+.bite{
+    margin-top:20px;
+}
+
+.progress {
+    margin-top: 20px;
+    background-color: #d6d6d6;
+}
+
+.progress-bar {
+    background-color: #7a7a7a;
+}
+
+.popup{
+    position:absolute;
+    width:99%;
+    height:99%;
+    top:0.5%;
+    left:0.5%;
+    box-shadow: 1px 1px 102px #000;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.popup.hell{
+    background-color: #000;
+    color: #FFF;
+}
+.popup.heaven{
+    background-color: #FFF;
+}
+
+.img-pop{
+    max-height: 80%;
+}
+
+.pop-title{
+    margin-top: 30px;
+}
