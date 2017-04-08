@@ -25,8 +25,6 @@
 ## About :
 Emacount is a web application of counting scores between teams during parties.
 
-For exemple, if you want to make a Angels vs Devils' party, you may want to have this application. Each person choose a side and each time he by a drink, his team earn a point!
+For exemple, if you want to make a Angels vs Devils' party, you may want to have this application. Each person choose a side and each time he buy a drink, his team earn a point!
 
-It may look very simple and not very intersting but it can be terrible if you manage the ambience very well during your party.
-
-This application was created by Ludovic SINTES and Guillaume FAYEMI, students of l'Ecole des mines d'Alès in France.
+It may look very simple and not very intersting but it can be terrible if you manage the ambiance very well during your party.
